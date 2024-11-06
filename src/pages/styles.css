@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: black; 
+  overflow: hidden; 
+  position: relative;
+  cursor: none; 
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.8; 
+  pointer-events: none;
+  animation: twinkle 1.5s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@font-face {
+  font-family: 'Star Jedi';
+  src: url('../assets/fonts/Starjedi.ttf') format('truetype');
+}
+
+.header {
+  text-align: center;
+  margin: 20px 0;
+  color: #ffff00; 
+  font-size: 80px; 
+  font-family: 'Star Jedi', sans-serif; 
+}
+
+.search-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  width: 200px; 
+}
+
+ul {
+  color: white;
+  text-align: center; 
+  list-style-type: none; 
+  padding: 0;
+  margin: 10px auto; 
+  max-height: 70vh; 
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 10px; 
+  overflow-y: scroll; 
+  
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+ul::-webkit-scrollbar {
+  display: none; 
+}
+
+li {
+  font-size: 18px;
+  margin: 5px 0; 
+}
+
+.sabre {
+  position: absolute;
+  width: 4px; 
+  height: 50px; 
+  background-color: #ff3c00; 
+  box-shadow: 0 0 10px rgb(255, 119, 0), 0 0 20px rgb(255, 51, 0), 0 0 30px rgb(255, 77, 0); 
+  border-radius: 2px; 
+  pointer-events: none; 
+  transform: translate(-50%, -50%) rotate(150deg); 
+  z-index: 1000; 
+}
+
+.character-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; 
+  justify-content: center;
+}
+
+.character-item {
+  text-align: center;
+  width: 80px; 
+}
+
+.character-image {
+  width: 60px; 
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ffff00; 
+  box-shadow: 0 0 5px #ffff00; 
+  margin-bottom: 5px; 
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: hsla(0, 0%, 0%, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; 
+}
+
+.modal-content {
+  background: #060606c9; 
+  padding: 20px;
+  border-radius: 8px;
+  width: 95%; 
+  max-width: 900px; 
+  max-height: 90vh; 
+  overflow-y: auto; 
+  display: flex;
+  gap: 20px;
+  color: #fff; 
+}
+
+.character-full-image {
+  width: 250px; 
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover; 
+}
+
+.character-details {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.character-details h2,
+.character-details p,
+.character-details h3,
+.character-details ul li {
+  color: #fff; 
+  margin: 4px 0;
+  font-size: 16px;
+}
+
+.character-details h2 {
+  font-size: 24px;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.character-details h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.character-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.character-details ul li {
+  font-size: 14px;
+  margin: 4px 0;
+  word-wrap: break-word;
+}

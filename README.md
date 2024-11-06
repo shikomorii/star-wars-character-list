@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+Star Wars Character Explorer
+Este projeto é uma aplicação React que permite visualizar e buscar personagens de Star Wars usando a Star Wars API. A aplicação exibe uma lista de personagens, permitindo a busca por nome e acesso a informações detalhadas sobre cada personagem em uma janela modal.
+  
+Figma do projeto:https://www.figma.com/proto/RiDcaXEheXYpODOHq2TfM0/Star-Wars?node-id=1-4&node-type=canvas&t=bh45xZgEwDaqqzAU-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A4
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Funcionalidades
+Busca de personagens por nome.
+Exibição de uma lista de personagens com imagens.
+Modal com detalhes do personagem, incluindo filmes nos quais ele aparece.
+Animação de fundo com estrelas e efeito de sabre de luz que segue o cursor.
+Pré-requisitos
+Node.js: Certifique-se de que o Node.js está instalado na máquina. Recomenda-se a versão 14 ou superior.
+Git: Ter o Git instalado facilita o processo de clonagem do repositório.
+Como Rodar o Projeto
+Clone o repositório
 
-## Available Scripts
+bash
+Copiar código
+git clone https://github.com/shikomorii/star-wars-character-explorer.git
+cd star-wars-character-explorer
+Instale as dependências
 
-In the project directory, you can run:
+Execute o comando abaixo para instalar todas as dependências do projeto:
 
-### `npm start`
+bash
+Copiar código
+npm install
+Inicie o servidor de desenvolvimento
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Use o comando abaixo para iniciar a aplicação:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+bash
+Copiar código
+npm start
+A aplicação estará disponível no navegador em http://localhost:3000.
 
-### `npm test`
+Nota sobre Vulnerabilidades nas Dependências
+Durante o desenvolvimento, foram identificadas algumas vulnerabilidades nas dependências ao executar npm audit. Foi aplicado npm audit fix para corrigir vulnerabilidades menores. No entanto, o comando npm audit fix --force foi evitado para prevenir problemas de compatibilidade com dependências principais, como o react-scripts. Essas vulnerabilidades restantes são conhecidas e podem ser abordadas em uma atualização futura.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Processo de Desenvolvimento
+Este projeto foi desenvolvido com foco em uma interface intuitiva e interativa para listar e visualizar detalhes dos personagens de Star Wars. Aqui estão alguns aspectos do desenvolvimento:
 
-### `npm run build`
+API e Busca: Foi utilizada a Star Wars API (SWAPI) para obter dados dos personagens e filmes. O uso de axios facilitou a requisição e manipulação dos dados.
+Interface e Efeitos: Além de um design responsivo, a aplicação conta com animações de fundo para criar uma "atmosfera" Star Wars, incluindo estrelas e um efeito de sabre de luz que segue o cursor do usuário.
+Modal para Detalhes: A modal exibe informações detalhadas de cada personagem, incluindo filmes com data de lançamento.
+Testes: Testes unitários foram implementados para garantir o bom funcionamento da busca e outros componentes principais.
+Desafios Encontrados
+Alguns dos desafios enfrentados no desenvolvimento incluem:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Problemas de Vulnerabilidade: As vulnerabilidades nas dependências exigiram uma avaliação cuidadosa para não quebrar a funcionalidade.
+Integração da API e Carga de Dados: Houve ajustes para garantir que os dados dos personagens fossem carregados e exibidos corretamente.
+Aprimoramento de Interface: Criar um efeito visual dinâmico, como estrelas e o sabre de luz, exigiu experimentação com useEffect e manipulação direta do DOM.
+Autor
+Desenvolvido por Sebastian Oyarbide.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Sinta-se à vontade para clonar, explorar e modificar este projeto! Que a Força esteja com você!
